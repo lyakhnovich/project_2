@@ -1,9 +1,10 @@
 div {
-  border: 1px solid #777;
+  border: 2px solid #777;
 }
 h1 {
   text-align:center
 }
+
 
 .header .logo {
   width: 100px;
@@ -22,7 +23,18 @@ h1 {
 
 
 .content {
+  color: rgb(49, 151, 116);
   background-color:black;
+  width: 940px;
+  margin: 10px auto;
+  padding: 5px 30px;
+}
+
+.block_bottom {
   width: 1000px;
   margin: 0 auto;
+}
+
+.block_right {
+  color: aqua;
 }
