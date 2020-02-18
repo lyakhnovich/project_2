@@ -1,3 +1,8 @@
 body {
   background-image: url("../images/main.jpg");
+  position: fixed;
+  top: 14%;
+  left: 32%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 150%;
 }
