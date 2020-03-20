@@ -1,0 +1,176 @@
+.page {
+  position: absolute; /*позиция относительно окна бровузера*/
+  top: 10px;/*отступ сверху*/
+  left: 15%; /*отступ слева*/
+  min-width: 70%; /*мин ширина*/
+  max-width: 70%; /*макс ширина*/
+  background-color: black;
+}
+
+@font-face {
+  font-family: SatanPosse; /* Гарнитура шрифта */
+  src: url(../fonts/SatanPosse.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Doom;
+  src: url(../fonts/Murder.ttf); /* Путь к файлу со шрифтом */
+}
+
+.header {
+  position: relative;
+  background-color: black;
+  padding: 5px;
+  overflow: hidden;
+}
+
+@keyframes turning {
+  0% {
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(90deg);
+  }
+  50% {
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(180deg);
+  }
+  75% {
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(270deg);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  width: 180px; /*размер блока*/
+  height: 180px; /*размер блока*/
+  float: left;
+  margin: 20px;
+  background-image: url("../images/logo2.png"); /*ссыль на картонку*/
+  background-size: cover; /*Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
+  animation: turning 2s linear infinite;
+  animation-duration: 15s;
+}
+
+.head_menu {
+  position: absolute;
+  top: 75%;
+  transform: translate(0, -50%);
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  display: inline-block;
+  color: darkred;
+  font-family: SatanPosse;
+}
+
+.head_menu_butt {
+  margin-left: 80px;
+  display: inline-block;
+  font-size: 50px;
+}
+
+.right_head {
+  margin: 0px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 200px; /*размер блока*/
+  height: 25px; /*размер блока*/
+  background-color: darkred;
+}
+
+.banner {
+  top: 10%;/*отступ сверху*/
+  margin: 0 23% 0 23%;
+  max-width: 54%;
+  height: 310px; /*размер блока*/
+  background-image: url("../images/banner.jpg"); /*ссыль на картонку*/
+  background-size: cover; /*Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
+  font-family: SatanPosse;
+}
+
+
+
+.content {
+  margin-top: 10px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.right_menu {
+  margin: 40px;
+  color: darkred;
+  background-color: black;
+  border: 5px double;
+  border-color: darkred;
+  width: 200px;
+  line-height: 17pt;
+  overflow: hidden;
+}
+
+.shop_list {
+  margin: 40px 0 40px 0;
+  width: 800px;
+  overflow: hidden;
+}
+
+.table_item {
+  margin: 0;
+  display: block;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  overflow: hidden;
+  width: 33%;
+  height: 300px;
+  margin: 0;
+  border: 10px solid black;
+  padding: 60px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #FFF;
+}
+
+.left_menu {
+  margin: 40px;
+  color: darkred;
+  background-color: black;
+  border: 5px double;
+  border-color: darkred;
+  width: 200px;
+  line-height: 17pt;
+  overflow: hidden;
+}
+
+
+
+/*************************/
+
+
+
+.pic {
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+
+
+
+
+
+.item_div {
+  margin: auto;
+
+}
