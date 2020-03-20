@@ -52,7 +52,7 @@
   height: 180px; /*размер блока*/
   float: left;
   margin: 20px;
-  background-image: url("../images/logo2.png"); /*ссыль на картонку*/
+  background-image: url("../images/logo2.jpg"); /*ссыль на картонку*/
   background-size: cover; /*Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
   animation: turning 2s linear infinite;
   animation-duration: 15s;
@@ -67,7 +67,7 @@
   list-style: none;
   display: inline-block;
   color: darkred;
-  font-family: SatanPosse;
+  font-family: SatanPosse, serif;
 }
 
 .head_menu_butt {
@@ -77,7 +77,7 @@
 }
 
 .right_head {
-  margin: 0px;
+  margin: 0;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -88,15 +88,13 @@
 
 .banner {
   top: 10%;/*отступ сверху*/
-  margin: 0 23% 0 23%;
-  max-width: 54%;
-  height: 310px; /*размер блока*/
-  background-image: url("../images/banner.jpg"); /*ссыль на картонку*/
-  background-size: cover; /*Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
-  font-family: SatanPosse;
+  margin: 0 40px 0 40px;
+  max-width: 100%;
+  height: 267px; /*размер блока*/
+  background-image: url("../images/lol.jpg"); /*ссыль на картонку*/
+  background-size: contain; /*Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
+  font-family: SatanPosse, serif;
 }
-
-
 
 .content {
   margin-top: 10px;
@@ -112,7 +110,7 @@
   background-color: black;
   border: 5px double;
   border-color: darkred;
-  width: 200px;
+  width: 130px;
   line-height: 17pt;
   overflow: hidden;
 }
@@ -121,25 +119,31 @@
   margin: 40px 0 40px 0;
   width: 800px;
   overflow: hidden;
+  display: block;
 }
 
 .table_item {
-  margin: 0;
-  display: block;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
+
 
 .item {
   overflow: hidden;
   width: 33%;
-  height: 300px;
+  height: 250px;
   margin: 0;
-  border: 10px solid black;
-  padding: 60px;
+  border: 5px solid black;
+  padding: 20px;
   box-sizing: border-box;
   text-align: center;
   background: #FFF;
+  float: right;
+}
+
+.item_div {
+  margin: auto;
 }
 
 .left_menu {
@@ -148,29 +152,13 @@
   background-color: black;
   border: 5px double;
   border-color: darkred;
-  width: 200px;
+  width: 130px;
   line-height: 17pt;
   overflow: hidden;
 }
 
-
-
-/*************************/
-
-
-
 .pic {
   max-width: 100%;
   max-height: 100%;
-
 }
 
-
-
-
-
-
-.item_div {
-  margin: auto;
-
-}
