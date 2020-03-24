@@ -5,6 +5,7 @@
   <title>сайтец</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/testovich.css">
+
 </head>
 <body class="hui">
 
@@ -30,19 +31,28 @@
   </div>
 
   <div class="content">
+
     <div class="right_menu">
-      <ul>
-        <li class="right_menu_detail">
-          <p>Satan's weapon</p>
-        </li>
-        <li class="right_menu_detail">
-          <p>Satan's books</p>
-        </li>
-        <li class="right_menu_detail">
-          <p>Satan's accessories</p>
-        </li>
-      </ul>
+
+      <input id="toggle" type="checkbox">
+
+      <!-- ВАЖНО: любой элемент, который мы хотим модифицировать при изменении состояния чекбокса, является «братским» элементом для чекбокса -->
+
+      <!-- Эта метка привязана к чекбоксу и будет содержать переключение «кнопок» -->
+      <label class="toggle-container" for="toggle">
+        <!-- Если меню открыто, то здесь будет иконка «X», в противном случае просто иконка гамбургера -->
+        <span class="button button-toggle"></span>
+      </label>
+
+      <!-- Навигация -->
+      <nav class="nav">
+        <a rel="nofollow" class="nav-item" href="">Satan's weapon</a>
+        <a rel="nofollow" class="nav-item" href="">Satan's books</a>
+        <a rel="nofollow" class="nav-item" href="">Satan's accessories</a>
+      </nav>
+
     </div>
+
 
     <div class="shop_list">
       <ul class="table_item">
@@ -86,12 +96,15 @@
     </div>
 
 
+
+
     <div class="left_menu">
       <img class="pic" src="images/reklama.jpg" alt="хуй тебе, а не картинка">
       <img class="pic" src="images/cat.gif" alt="хуй тебе, а не картинка">
       <img class="pic" src="images/hell.gif" alt="хуй тебе, а не картинка">
     </div>
   </div>
+
 
 </div>
 
