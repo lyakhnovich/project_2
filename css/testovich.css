@@ -52,8 +52,8 @@ a {
 }
 
 .logo {
-  width: 150px; /*размер блока*/
-  height: 150px; /*размер блока*/
+  width: 120px; /*размер блока*/
+  height: 120px; /*размер блока*/
   float: left;
   margin: 0;
   background-image: url("../images/logo2.jpg"); /*ссыль на картонку*/
