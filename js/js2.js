@@ -70,24 +70,29 @@ var myNull = null,
 // console.log(sum(6, 4));
 
 //объекты
-var myObject = {
-  name: "кекович",
-  surname: "суковна",
-  age: 23,
-  getFullName: function () {
-    return this.name + " " + this.surname;
-  }
-};
-myObject.name = "лолкович";
-console.log(myObject.name);
+// var myObject = {
+//   name: "кекович",
+//   surname: "суковна",
+//   age: 23,
+//   getFullName: function () {
+//     return this.name + " " + this.surname;
+//   }
+// };
+// myObject.name = "лолкович";
+// console.log(myObject.name);
+//
+// console.log(myObject.getFullName());
+//
 
-console.log(myObject.getFullName());
-
-
-
-
-
-
+function myFunc() {
+ var chbox;
+ chbox = document.getElementById("one");
+ if (chbox.checked) {
+  alert("choose");
+ } else {
+  alert("not choose");
+ }
+}
 
 
 
