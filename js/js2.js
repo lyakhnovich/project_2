@@ -125,7 +125,8 @@ var myNull = null,
 function myFunc5() {
  var rng=document.getElementById('rng1');
  var p=document.getElementById('paragraph');
- p.innerHTML=rng.value;
+ p.innerHTML='<div>' + rng.value + ' 666'+'</div>';
+
  var t=document.getElementById('txt');
  t.value=rng.value;
 }
