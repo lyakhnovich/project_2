@@ -8,6 +8,19 @@
 <body>
     <label for="one">test</label>
     <input type="checkbox" id="one" onchange=myFunc()><br>
-    <label><input type="checkbox" id="two" onclick=myFunc2()>пример checkbox</label><br>
+    <label><input type="checkbox" id="two" onclick=myFunc2()>пример checkbox</label><br><br>
+
+    <input type="radio" name="r1" value="5"> 0<br>
+    <input type="radio" name="r1" value="53"> 1<br>
+    <input type="radio" name="r1" value="535"> 2<br>
+    <button onclick="myFunc3()"> Проверить выбранный radiobutton </button><br><br><br>
+
+    <select name="" id="mySelect" onchange=myFunc4()>
+        <option value="">Apple</option>
+        <option value="">Orange</option>
+        <option value="">Pineapple</option>
+        <option value="">Tomato</option>
+    </select>
+
 </body>
 </html>

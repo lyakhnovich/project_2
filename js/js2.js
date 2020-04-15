@@ -83,6 +83,7 @@ var myNull = null,
 //
 // console.log(myObject.getFullName());
 
+// ONCLICK ONCHANGE
 function myFunc() {
  var chbox;
  chbox = document.getElementById("one");
@@ -103,7 +104,23 @@ function myFunc2() {
  }
 }
 
+// RADIOBUTTON
+function myFunc3() {
+ var radi=document.getElementsByName("r1");
+ for (var i=0; i < radi.length; i++) {
+  //alert(i);
+  if (radi[i].checked) {
+   alert("выбран " + i + " элемент")
+  }
+ }
+}
 
+// SELECT
+function myFunc4() {
+ var sel=document.getElementById("mySelect").selectedIndex;
+ var options=document.getElementById('mySelect').options;
+ alert('выбрана опция ' + options[sel].text);
+}
 
 
 
