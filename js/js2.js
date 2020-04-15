@@ -82,7 +82,6 @@ var myNull = null,
 // console.log(myObject.name);
 //
 // console.log(myObject.getFullName());
-//
 
 function myFunc() {
  var chbox;
@@ -94,6 +93,15 @@ function myFunc() {
  }
 }
 
+function myFunc2() {
+ var chbox;
+ chbox = document.getElementById("two");
+ if (chbox.checked) {
+  alert("выбран");
+ } else {
+  alert("не выбран");
+ }
+}
 
 
 
