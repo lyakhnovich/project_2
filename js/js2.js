@@ -118,8 +118,15 @@ function myFunc3() {
 // SELECT
 function myFunc4() {
  var sel=document.getElementById("mySelect").selectedIndex;
- var options=document.getElementById('mySelect').options;
- alert('выбрана опция ' + options[sel].text);
+ var opts=document.getElementById('mySelect').options;
+ alert('выбрана опция ' + opts[sel].text);
+}
+
+function myFunc5() {
+ var rng=document.getElementById('rng1');
+ var p=document.getElementById('paragraph');
+ p.innerHTML=rng.value;
+
 }
 
 
