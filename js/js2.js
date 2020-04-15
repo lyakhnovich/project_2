@@ -84,49 +84,50 @@ var myNull = null,
 // console.log(myObject.getFullName());
 
 // ONCLICK ONCHANGE
-function myFunc() {
- var chbox;
- chbox = document.getElementById("one");
- if (chbox.checked) {
-  alert("choose");
- } else {
-  alert("not choose");
- }
-}
-
-function myFunc2() {
- var chbox;
- chbox = document.getElementById("two");
- if (chbox.checked) {
-  alert("выбран");
- } else {
-  alert("не выбран");
- }
-}
-
-// RADIOBUTTON
-function myFunc3() {
- var radi=document.getElementsByName("r1");
- for (var i=0; i < radi.length; i++) {
-  //alert(i);
-  if (radi[i].checked) {
-   alert("выбран " + i + " элемент")
-  }
- }
-}
-
-// SELECT
-function myFunc4() {
- var sel=document.getElementById("mySelect").selectedIndex;
- var opts=document.getElementById('mySelect').options;
- alert('выбрана опция ' + opts[sel].text);
-}
+// function myFunc() {
+//  var chbox;
+//  chbox = document.getElementById("one");
+//  if (chbox.checked) {
+//   alert("choose");
+//  } else {
+//   alert("not choose");
+//  }
+// }
+//
+// function myFunc2() {
+//  var chbox;
+//  chbox = document.getElementById("two");
+//  if (chbox.checked) {
+//   alert("выбран");
+//  } else {
+//   alert("не выбран");
+//  }
+// }
+//
+// // RADIOBUTTON
+// function myFunc3() {
+//  var radi=document.getElementsByName("r1");
+//  for (var i=0; i < radi.length; i++) {
+//   //alert(i);
+//   if (radi[i].checked) {
+//    alert("выбран " + i + " элемент")
+//   }
+//  }
+// }
+//
+// // SELECT
+// function myFunc4() {
+//  var sel=document.getElementById("mySelect").selectedIndex;
+//  var opts=document.getElementById('mySelect').options;
+//  alert('выбрана опция ' + opts[sel].text);
+// }
 
 function myFunc5() {
  var rng=document.getElementById('rng1');
  var p=document.getElementById('paragraph');
  p.innerHTML=rng.value;
-
+ var t=document.getElementById('txt');
+ t.value=rng.value;
 }
 
 
