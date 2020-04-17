@@ -122,13 +122,58 @@ var myNull = null,
 //  alert('выбрана опция ' + opts[sel].text);
 // }
 
-function myFunc5() {
- var rng=document.getElementById('rng1');
- var p=document.getElementById('paragraph');
- p.innerHTML='<div>' + rng.value + ' 666'+'</div>';
+// function myFunc5() {
+//  var rng=document.getElementById('rng1');
+//  var p=document.getElementById('paragraph');
+//  p.innerHTML='<div>' + rng.value + ' 666'+'</div>';
+//
+//  var t=document.getElementById('txt');
+//  t.value=rng.value;
+//
+//  var vDiv=document.getElementById('testDiv');
+//  vDiv.style.width=rng.value+'px';
+// }
 
- var t=document.getElementById('txt');
- t.value=rng.value;
+function fCssStyle() {
+ var rngTopLeft = document.getElementById('rtl').value;
+ var rngTopRight = document.getElementById('rtr').value;
+ var rngBottomRight = document.getElementById('rbr').value;
+ var rngBottomLeft = document.getElementById('rbl').value;
+
+ var txtTopLeft = document.getElementById('ttl').value;
+ var txtTopRight = document.getElementById('ttr').value;
+ var txtBottomRight = document.getElementById('tbr').value;
+ var txtBottomLeft = document.getElementById('tbl').value;
+
+ var block = document.getElementById('block');
+
+ txtTopLeft.value = rngTopLeft;
+ txtTopRight.value = rngTopRight;
+ txtBottomRight.value = rngBottomRight;
+ txtBottomLeft.value = rngBottomLeft;
+
+ block.style.borderRadius = rngTopLeft + 'px' + rngTopRight + 'px' + rngBottomRight + 'px' + rngBottomLeft + 'px';
+}
+
+function fCssStyle() {
+ var rngTopLeft = document.getElementById('rtl').value;
+ var rngTopRight = document.getElementById('rtr').value;
+ var rngBottomRight = document.getElementById('rbr').value;
+ var rngBottomLeft = document.getElementById('rbl').value;
+
+ var txtTopLeft = document.getElementById('ttl');
+ var txtTopRight = document.getElementById('ttr');
+ var txtBottomRight = document.getElementById('tbr');
+ var txtBottomLeft = document.getElementById('tbl');
+
+ var block = document.getElementById('block');
+
+ txtTopLeft.value = rngTopLeft;
+ txtTopRight.value = rngTopRight;
+ txtBottomRight.value = rngBottomRight;
+ txtBottomLeft.value = rngBottomLeft;
+
+ block.style.borderRadius = rngTopLeft + 'px ' + rngTopRight + 'px ' + rngBottomRight + 'px ' + rngBottomLeft + 'px';
 }
 
 
