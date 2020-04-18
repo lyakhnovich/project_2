@@ -336,3 +336,18 @@ a {
   height: 100px;
   background: forestgreen ;
 }
+
+.menu-item {
+  border: 2px solid #66CDAA;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-item .submenu {
+  height: 40px;
+  width: 120px;
+  background: forestgreen;
+  position: absolute;
+  cursor: pointer;
+}
