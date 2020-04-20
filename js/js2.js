@@ -176,7 +176,7 @@ if(localStorage.getItem('todo')){
   ToDoList.push(newToDo);
   displayMessages();
   localStorage.setItem('todo', JSON.stringify(ToDoList));
- })
+ });
 
 function displayMessages() {
  let displayMessage = '';
@@ -184,9 +184,42 @@ function displayMessages() {
   displayMessage += `
   <li>
     <input type="checkbox" id="item_${i}" ${item.checked ? 'checked' : ''}>
-    <label for="item_${i}">${item.todo}</label>
+    <label for="item_${i}" class="${item.important ? 'important' : ''}">${item.todo}</label>
   </li>
   `;
   todo.innerHTML = displayMessage;
- })
+ });
 }
+
+
+todo.addEventListener('change', function (event) {
+ let idInput = event.target.getAttribute('id'),
+   forLabel = todo.querySelector('[for='+ idInput +']'),
+   valueLabel = forLabel.innerHTML;
+
+ ToDoList.forEach(function(item) {
+  if (item.todo === valueLabel) {
+   item.checked = !item.checked;
+   localStorage.setItem('todo', JSON.stringify(ToDoList));
+  }
+ })
+
+ console.log(valueLabel);
+});
+
+
+todo.addEventListener('contextmenu', function (event) {
+ event.preventDefault(); // метод - по правой клавише ничего не происходит
+ ToDoList.forEach(function (item, i) { // forEach - переборка массива (цикл)
+  if(item.todo === event.target.innerHTML) {
+   if(event.ctrlKey || event.metaKey) { // событие при зажатии CNTRL
+    ToDoList.splice(i, 1); // метод - удаление элемента из массива (одного!)
+   } else {
+    item.important = !item.important;
+   }
+
+   displayMessages();
+   localStorage.setItem('todo', JSON.stringify(ToDoList));
+  }
+ })
+})
