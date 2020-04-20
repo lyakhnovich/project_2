@@ -160,9 +160,9 @@ let addMessage = document.querySelector('.message'),
   addButton = document.querySelector('.add'),
   todo = document.querySelector('.todo');
 
-let ToDoList = [];
+let ToDoList = []; // массивчик
 
-if(localStorage.getItem('todo')){
+if(localStorage.getItem('todo')){ // метод getItem для Storage - ключ в качестве параметра, обратно - значение по етому ключу
  ToDoList = JSON.parse(localStorage.getItem('todo'));
  displayMessages();
 }
@@ -180,6 +180,7 @@ if(localStorage.getItem('todo')){
 
 function displayMessages() {
  let displayMessage = '';
+ if(ToDoList.length === 0)
  ToDoList.forEach(function (item, i) {
   displayMessage += `
   <li>
