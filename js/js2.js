@@ -1,11 +1,11 @@
 //переменные
-var message;
-message = "сообщение";
-var myNumber = 10.28392;
-var myString = "ДОРОУ!";
-var myBoolean = true;
-var myNull = null,
-    myUndefined = undefined;
+// var message;
+// message = "сообщение";
+// var myNumber = 10.28392;
+// var myString = "ДОРОУ!";
+// var myBoolean = true;
+// var myNull = null,
+//     myUndefined = undefined;
 
 //числа
 // console.log(50 + myNumber, 50 - myNumber, 50 * myNumber, 50 / myNumber);
@@ -25,7 +25,7 @@ var myNull = null,
 // console.log(myString.toLowerCase());
 
 //массивы
- var names = ["LOL", 666, "KEK", "CHEBUREK"];
+//  var names = ["LOL", 666, "KEK", "CHEBUREK"];
 // console.log(names[0].toLowerCase());
 // names.push("SOSKA NEREALKA");
 // console.log(names[2]);
@@ -156,6 +156,37 @@ var myNull = null,
 // }
 
 
+let addMessage = document.querySelector('.message'),
+  addButton = document.querySelector('.add'),
+  todo = document.querySelector('.todo');
 
+let ToDoList = [];
 
+if(localStorage.getItem('todo')){
+ ToDoList = JSON.parse(localStorage.getItem('todo'));
+ displayMessages();
+}
 
+ addButton.addEventListener('click', function () {
+  let newToDo = {
+   todo: addMessage.value,
+   checked: false,
+   important: false
+  }
+  ToDoList.push(newToDo);
+  displayMessages();
+  localStorage.setItem('todo', JSON.stringify(ToDoList));
+ })
+
+function displayMessages() {
+ let displayMessage = '';
+ ToDoList.forEach(function (item, i) {
+  displayMessage += `
+  <li>
+    <input type="checkbox" id="item_${i}" ${item.checked ? 'checked' : ''}>
+    <label for="item_${i}">${item.todo}</label>
+  </li>
+  `;
+  todo.innerHTML = displayMessage;
+ })
+}
