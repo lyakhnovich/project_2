@@ -168,6 +168,7 @@ if(localStorage.getItem('todo')){ // метод getItem для Storage - клю�
 }
 
  addButton.addEventListener('click', function () {
+  if(!addMessage.value) return;
   let newToDo = {
    todo: addMessage.value,
    checked: false,
@@ -176,6 +177,8 @@ if(localStorage.getItem('todo')){ // метод getItem для Storage - клю�
   ToDoList.push(newToDo);
   displayMessages();
   localStorage.setItem('todo', JSON.stringify(ToDoList));
+
+  addMessage.value = '';
  });
 
 function displayMessages() {
