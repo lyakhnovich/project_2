@@ -180,7 +180,8 @@ if(localStorage.getItem('todo')){ // метод getItem для Storage - клю�
 
 function displayMessages() {
  let displayMessage = '';
- if(ToDoList.length === 0)
+ if(ToDoList.length === 0) todo.innerHTML = '';
+
  ToDoList.forEach(function (item, i) {
   displayMessage += `
   <li>
@@ -218,8 +219,8 @@ todo.addEventListener('contextmenu', function (event) {
    } else {
     item.important = !item.important;
    }
-
    displayMessages();
+
    localStorage.setItem('todo', JSON.stringify(ToDoList));
   }
  })
