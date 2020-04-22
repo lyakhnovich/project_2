@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  background-color: #4A752C;
+  border-top: 2px solid #313430;
+}
+
+canvas {
+  display: block;
+  position: relative;
+  margin: -71px auto 0 auto;
+  z-index: 99;
+}
+
+.content {
+  padding-bottom: 2.5rem;
+  background-color: #578A34;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #578A34;
+  z-index: -1;
+}
