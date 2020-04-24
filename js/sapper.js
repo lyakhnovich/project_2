@@ -124,7 +124,7 @@ function draw() {
   }
 }
 
-setInterval(draw, 0.25);
+setInterval(draw, 25);
 
 canvas.addEventListener('mousedown', function (event) {
 
@@ -162,7 +162,7 @@ function showBlock(h, w) {
 
 function checkZero(h,w) {
 
-  if(h >= 0 && h <= countBlock - 1 && w >= 0 && w <= countBlock - 1) {
+  if(h >= 0 && h <= countBlock - 1 && w >= 0 && w < countBlock - 1) {
     if(!blocks[h][w].show) {
       showBlock(h,w);
     }
